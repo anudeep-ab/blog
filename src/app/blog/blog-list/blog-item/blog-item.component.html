@@ -1,3 +1,42 @@
-<p>
-  blog-item works!
-</p>
+ <div   *ngFor="let blog of blogs">
+<a
+
+  style="cursor: pointer;"
+
+  routerLinkActive="active"
+  class="list-group-item clearfix"  (click)="sendBlog(this.blog)">
+  <div class="pull-left col-md-9">
+    <h4 class="list-group-item-heading">{{blog.title}}</h4>
+    <p class="list-group-item-text ">{{ blog.description| slice:0:100}}</p>
+  </div>
+  <span class="pull-right col-md-3">
+        <img
+          [src]="blog.imagePath"
+          alt="{{ blog.title }}"
+          class="img-responsive"
+          style="min-height: 60px;max-height: 60px;min-width:85px;max-width:85px;">
+      </span>
+</a>
+</div>
+
+
+
+<!-- <div  *ngFor="let blog of blogs">
+<a
+  style="cursor: pointer;"
+
+  routerLinkActive="active"
+  class="list-group-item clearfix" (click)="sendBlog(this.blog)">
+  <div class="pull-left">
+    <h4 class="list-group-item-heading">{{blog.title}}</h4>
+    <p class="list-group-item-text">{{ blog.description| slice:0:100}}</p>
+  </div>
+  <span class="pull-right">
+        <img
+          [src]="blog.imagePath"
+          alt="{{ blog.title }}"
+          class="img-responsive"
+          style="max-height: 50px;min-width:85px;max-width:85px;">
+      </span>
+</a>
+</div> -->

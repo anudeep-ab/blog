@@ -3,6 +3,9 @@ import { NgModule } from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { BlogService } from './services/blog.service';
+import { Http } from '@angular/http';
+import {HttpModule} from '@angular/http';
+import { ShareBlogDataService } from './services/share-blog-data.service';
 
 
 import { AppComponent } from './app.component';
@@ -41,9 +44,10 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [BlogService],
+  providers: [BlogService, ShareBlogDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

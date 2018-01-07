@@ -10,7 +10,7 @@ export class BlogService {
     const headers = new Headers();
     headers.append('Content-Type', 'application/json');
    // let ep = this.prepEndpoint('banks/register');
-    return this.http.post('http://localhost:3000/blog/save', blog, {headers: headers})
+    return this.http.post('http://localhost:8080/blog/save', blog, {headers: headers})
       .map(res => res.json())
   }
 

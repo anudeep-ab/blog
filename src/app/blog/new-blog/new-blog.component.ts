@@ -16,8 +16,8 @@ export class NewBlogComponent implements OnInit {
   ngOnInit() {
     this.blogForm = new FormGroup({
       title: new FormControl(''),
-      image: new FormControl(''),
-      body: new FormControl('')
+      imagePath: new FormControl(''),
+      description: new FormControl('')
       })
   }
   onSubmit(user) {
